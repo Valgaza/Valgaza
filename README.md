@@ -4,13 +4,7 @@
 - Computer Engineering student at **KJSCE, Mumbai**  
 - Ex - AI/ML Intern at **PwC India**
 - Focused on building something worthwhile and relevant.
-- Actively working on hackathons and open-source contributions
-
-## 🎯 My Approach to ML  
-Focusing on **building core logic**, not just wrappers.  
-- Implementing neural networks and algorithms from scratch to understand the math.  
-- Exploring optimization, data pipelines, and model deployment beyond library defaults.  
-- Applying ML to solve **real, relevant problems** instead of just GPT wrappers.    
+- Actively working on hackathons and open-source contributions 
 
 ---
 
@@ -43,8 +37,3 @@ Focusing on **building core logic**, not just wrappers.
 ## 🌐 Connect With Me  
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=flat&logo=vercel&logoColor=white)](https://aaryapatil.vercel.app/)  [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/valgaza)  [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/apatil_3004/)   [![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:aaryapatil3004@gmail.com)  
-
----
-
-## 💡 Fun Fact  
-*"First, solve the problem. Then, write the code." – John Johnson*  
