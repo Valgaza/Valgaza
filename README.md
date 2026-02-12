@@ -35,7 +35,7 @@
 - [**FairFunds**](https://github.com/Valgaza/FairFunds)  
   *Splitwise-style finance tracker with personal finance extensions (Next.js, Tailwind, Prisma, Postgres)*  
 
-- **BlockPass** *(Coming Soon)*  
+- [**BlockPass**](https://github.com/Valgaza/BlockPass) 
   *NFT-based event ticketing platform using soulbound tokens to eliminate ticket reselling and scalping*  
 
 ---
