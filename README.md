@@ -23,7 +23,7 @@
 - [**TrafficOS**](https://github.com/Valgaza/TrafficOS)  
   *Urban traffic forecasting using Temporal Fusion Transformer (TFT) with game-theoretic route optimization and real-time heatmap visualization*
 
-- [**Indexial**](https://github.com/Valgaza/Indexial) *(Coming Soon)*  
+- [**Indexial**](https://github.com/Valgaza/Indexial) 
   *Hybrid SQL + RAG query engine with semantic search (Jina AI embeddings + pgvector), session-based memory, and intelligent query routing*
 
 - [**Hiring Suite**](https://github.com/Valgaza/Hiring_Suite)  
