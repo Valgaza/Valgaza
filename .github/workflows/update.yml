@@ -1,0 +1,62 @@
+name: Update age
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # daily at midnight UTC
+  workflow_dispatch:       # allows manual trigger from GitHub UI
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Update uptime in SVGs
+        run: |
+          python3 - <<'EOF'
+          import re
+          from datetime import date
+
+          dob   = date(2004, 4, 30)  # Aarya's DOB
+          today = date.today()
+          years  = today.year - dob.year - ((today.month, today.day) < (dob.month, dob.day))
+          months = (today.month - dob.month) % 12
+
+          new_val     = f"{years} years, {months} months, Mumbai, India"
+          TOTAL_WIDTH = 69
+
+          k    = "Uptime"
+          used = 2 + len(k) + 2 + 1 + len(new_val)
+          dots = "." * (TOTAL_WIDTH - used)
+
+          for fname in ["dark_mode.svg", "light_mode.svg"]:
+              with open(fname) as f:
+                  content = f.read()
+
+              # Update value
+              updated = re.sub(
+                  r'\d+ years, \d+ months, Mumbai, India',
+                  new_val,
+                  content
+              )
+              # Update dot count so alignment stays correct
+              updated = re.sub(
+                  r'(Uptime</tspan><tspan fill="[^"]+">: )\.+( </tspan>)',
+                  lambda m: m.group(1) + dots + m.group(2),
+                  updated
+              )
+
+              with open(fname, "w") as f:
+                  f.write(updated)
+
+          print(f"Updated to: {new_val} ({len(dots)} dots)")
+          EOF
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet || (git add dark_mode.svg light_mode.svg && git commit -m "chore: update age" && git push)
